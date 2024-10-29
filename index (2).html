@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Cactus</title>
+    <style>
+        :root {
+            --color-primary: #2d6a4f;
+            --color-secondary: #40916c;
+            --color-background: #d8f3dc;
+            --color-text: #333;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-background);
+            color: var(--color-text);
+        }
+        header {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 1rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .menu-toggle {
+            background: var(--color-secondary);
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-radius: 4px;
+        }
+        .menu-toggle:hover {
+            background-color: #52b788;
+        }
+        .menu {
+            display: none;
+            position: absolute;
+            right: 1rem;
+            top: 4rem;
+            background-color: white;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .menu.active {
+            display: block;
+        }
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .menu li a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: var(--color-text);
+            text-decoration: none;
+        }
+        .menu li a:hover {
+            background-color: #e9f5db;
+        }
+        main {
+            padding: 2rem 0;
+        }
+        .hero {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: var(--color-primary);
+            margin-top: 0;
+        }
+        .cactus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .cactus-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .cactus-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .cactus-card-content {
+            padding: 1rem;
+        }
+        footer {
+            background-color: var(--color-primary);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .menu-toggle {
+                margin-top: 1rem;
+            }
+            .menu {
+                width: 100%;
+                right: 0;
+                top: 6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">Mundo Cactus</div>
+            <nav>
+                <button class="menu-toggle" aria-expanded="false" aria-controls="menu">
+                    Menú
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+                <div class="menu" id="menu">
+                    <ul>
+                        <li><a href="#">Tipos de cactus</a></li>
+                        <li><a href="#">Tipo de arena</a></li>
+                        <li><a href="#">Crecimiento</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">WhatsApp</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section class="hero">
+            <h1>Bienvenido al Mundo de los Cactus</h1>
+            <p>Descubre la belleza y diversidad de estas fascinantes plantas suculentas. Desde los majestuosos saguaros hasta los diminutos cactus de escritorio, hay un cactus para cada espacio y gusto.</p>
+        </section>
+        <div class="cactus-grid">
+            <div class="cactus-card">
+                <img src="/placeholder.svg?height=200&width=300" alt="Cactus 1">
+                <div class="cactus-card-content">
+                    <h2>Cactus Espectacular 1</h2>
+                    <p>Una breve descripción de este hermoso cactus y sus características únicas.</p>
+                </div>
+            </div>
+            <div class="cactus-card">
+                <img src="/placeholder.svg?height=200&width=300" alt="Cactus 2">
+                <div class="cactus-card-content">
+                    <h2>Cactus Espectacular 2</h2>
+                    <p>Una breve descripción de este hermoso cactus y sus características únicas.</p>
+                </div>
+            </div>
+            <div class="cactus-card">
+                <img src="/placeholder.svg?height=200&width=300" alt="Cactus 3">
+                <div class="cactus-card-content">
+                    <h2>Cactus Espectacular 3</h2>
+                    <p>Una breve descripción de este hermoso cactus y sus características únicas.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Mundo Cactus. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('menu');
+            const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+            this.setAttribute('aria-expanded', !expanded);
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
